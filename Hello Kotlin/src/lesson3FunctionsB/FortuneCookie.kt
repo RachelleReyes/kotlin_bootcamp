@@ -35,12 +35,19 @@ fun main(args: Array<String>) {
 //    println("Your fortune is: ${getFortuneCookie()}")
 
     // Extra practice
-    var counter = 0
-    do {
-        val fortune = getFortuneCookie()
-        counter++
-        println("Your fortune is $fortune")
-    } while (!fortune.contains("Take it easy") && counter <10)
+//    var counter = 0
+//    do {
+//        val fortune = getFortuneCookie()
+//        counter++
+//        println("Your fortune is $fortune")
+//    } while (!fortune.contains("Take it easy") && counter <10)
+
+    var fortune: String
+    repeat(10) {
+        fortune = lesson3Functions.getFortune(lesson3Functions.getBirthday())
+        println("\nYour fortune is: $fortune")
+//        if (fortune.contains("Take it easy")) break;
+    }
 }
 
 fun getFortuneCookie(): String {
